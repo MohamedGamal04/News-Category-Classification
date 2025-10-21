@@ -17,7 +17,7 @@ A complete end-to-end notebook for classifying news articles into four categorie
 - nltk, num2words, contractions
 - matplotlib, plotly, wordcloud
 
-Example (Windows PowerShell):
+Installation (Windows PowerShell):
 1. Create & activate venv
    python -m venv .venv
    .venv\Scripts\Activate.ps1
