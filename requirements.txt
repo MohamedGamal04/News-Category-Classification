@@ -1,0 +1,12 @@
+numpy
+pandas
+scikit-learn
+tensorflow
+lightgbm
+nltk
+num2words
+contractions
+matplotlib
+plotly
+wordcloud
+kagglehub
