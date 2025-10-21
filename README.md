@@ -9,11 +9,6 @@ A complete end-to-end notebook for classifying news articles into four categorie
 - Word clouds and feature importance visualization
 - Classification reports and evaluation utilities
 
-## Repository structure
-- News Category Classification.ipynb — main notebook with full pipeline and visualizations
-- requirements.txt — (optional) list of Python dependencies
-- README.md — project description and usage
-
 ## Requirements (recommended)
 - Python 3.8+
 - numpy, pandas, scikit-learn
@@ -45,7 +40,5 @@ Run required NLTK downloads in the notebook (cells include downloads for punkt, 
   - trains a Keras feed‑forward network using a TF‑IDF batch generator,
   - prints classification reports and visualizations.
 
-## Evaluate / Predict
-The notebook includes a helper function `predict_and_report(model, X_test, y_test)` — use it to print the classification report for the trained Keras model. Example:
-```python
-predict_and_report(model, X_test, y_test)
+## Acknowledgments
+- The dataset used in this project is sourced from [Kaggle]([https://www.imdb.com/](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset)).
