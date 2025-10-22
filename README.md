@@ -17,17 +17,21 @@ A complete end-to-end notebook for classifying news articles into four categorie
 - nltk, num2words, contractions
 - matplotlib, plotly, wordcloud
 
-Installation (Windows PowerShell):
-1. Create & activate venv
-   python -m venv .venv
-   .venv\Scripts\Activate.ps1
-
-2. Install packages
-   pip install -r requirements.txt
-
-If you don't have a requirements.txt, install core packages:
-   pip install numpy pandas scikit-learn tensorflow lightgbm nltk num2words contractions matplotlib plotly wordcloud
-
+## Installation (Windows PowerShell)
+Create & activate virtual environment:
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+Install packages:
+```powershell
+pip install -r requirements.txt
+```
+If no requirements.txt:
+```powershell
+pip install numpy pandas scikit-learn tensorflow lightgbm nltk num2words contractions matplotlib plotly wordcloud
+```
+   
 Run required NLTK downloads in the notebook (cells include downloads for punkt, stopwords, wordnet, averaged_perceptron_tagger).
 
 ## Usage
