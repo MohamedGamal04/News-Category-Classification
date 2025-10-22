@@ -45,4 +45,4 @@ Run required NLTK downloads in the notebook (cells include downloads for punkt, 
   - prints classification reports and visualizations.
 
 ## Acknowledgments
-- The dataset used in this project is sourced from [Kaggle]([[https://www.imdb.com/](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset)]).
+- The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset).
