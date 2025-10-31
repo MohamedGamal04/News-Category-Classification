@@ -24,7 +24,7 @@ Live demo : https://news-category-classification-zzmfsj23xhyrlthxynyet8.streamli
 
 1. Clone the repository:
 ``` powershell
-git clone https://github.com/MohamedGamal04News-Category-Classification.git
+git clone https://github.com/MohamedGamal04/News-Category-Classification.git
 cd News-Category-Classification
 ```
 2. Create a Python environment and activate it (recommended):
