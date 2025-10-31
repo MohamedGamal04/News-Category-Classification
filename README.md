@@ -1,6 +1,8 @@
 # News Category Classification
 A complete end-to-end notebook for classifying news articles into four categories (World, Sports, Business, Sci/Tech) using the AG News dataset. The project demonstrates data loading, preprocessing (cleaning + lemmatization), TF‑IDF feature extraction, classical ML (Logistic Regression, LightGBM) with hyperparameter search, and a feed‑forward neural network (TensorFlow/Keras). Visualizations (word clouds, coefficient bar chart) and evaluation reports are included.
 
+Live demo : https://news-category-classification-zzmfsj23xhyrlthxynyet8.streamlit.app/
+
 ## Features
 - Data cleaning and lemmatization using NLTK
 - TF‑IDF feature extraction
@@ -8,41 +10,53 @@ A complete end-to-end notebook for classifying news articles into four categorie
 - Feed‑forward neural network with TF‑IDF input
 - Word clouds and feature importance visualization
 - Classification reports and evaluation utilities
+- Streamlit UI demo for interactive sentiment analysis
 
-## Requirements (recommended)
-- Python 3.8+
-- numpy, pandas, scikit-learn
-- tensorflow (or tensorflow-cpu)
-- lightgbm
-- nltk, num2words, contractions
-- matplotlib, plotly, wordcloud
+## Project Structure
 
-## Installation (Windows PowerShell)
-Create & activate virtual environment:
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
+- `model.pkl` `vectorizer.pkl` - model and vectorizer files
+- `News Category Classification.ipynb` - Jupyter Notebook containing preprocessing, training, and evaluation pipeline
+- `app.py` - Streamlit application script for live sentiment analysis
+- `requirements.txt` - Required Python packages
+- `README.md` - Project overview and usage instructions
+
+## Installation
+
+1. Clone the repository:
+``` powershell
+git clone https://github.com/MohamedGamal04News-Category-Classification.git
+cd News-Category-Classification
 ```
-Install packages:
-```powershell
+2. Create a Python environment and activate it (recommended):
+``` powershell
+conda create -n classify-env python=3.8
+conda activate classify-env
+```
+3. Install dependencies:
+``` powershell
 pip install -r requirements.txt
 ```
-If no requirements.txt:
-```powershell
-pip install numpy pandas scikit-learn tensorflow lightgbm nltk num2words contractions matplotlib plotly wordcloud
+4. Download necessary NLTK data resources:
+``` python
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
 ```
    
 Run required NLTK downloads in the notebook (cells include downloads for punkt, stopwords, wordnet, averaged_perceptron_tagger).
 
 ## Usage
-- Open `News Category Classification.ipynb` in VS Code or Jupyter Notebook and run cells sequentially.
-- The notebook:
-  - downloads and loads the AG News dataset,
-  - preprocesses text,
-  - extracts TF‑IDF features,
-  - runs classical models with GridSearchCV,
-  - trains a Keras feed‑forward network using a TF‑IDF batch generator,
-  - prints classification reports and visualizations.
 
-## Acknowledgments
-- The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset).
+- Train the model and evaluate using the Jupyter Notebook.
+- To use the Streamlit app (once created and set up), run:
+``` terminal
+streamlit run app.py
+```
+
+- The Streamlit UI allows you to enter reviews manually or upload CSV files for batch prediction.
+
+## Dataset
+
+This project uses the [AG news classification dataset](https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset).
