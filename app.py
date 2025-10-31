@@ -85,7 +85,7 @@ with st.sidebar:
     st.header("About")
     st.markdown("""
     This app uses a trained Logistic Regression model with TF-IDF vectorization 
-    to predict category from text reviews.
+    to predict category from text.
     
     The preprocessing includes:
     - Contraction expansion
@@ -256,4 +256,5 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
 
