@@ -85,7 +85,7 @@ with st.sidebar:
     st.header("About")
     st.markdown("""
     This app uses a trained Logistic Regression model with TF-IDF vectorization 
-    to predict sentiment from text reviews.
+    to predict category from text reviews.
     
     The preprocessing includes:
     - Contraction expansion
@@ -166,7 +166,7 @@ with tab2:
                 df['Text'] = df['Title'] + ' ' + df['Description']
 
                 predictions = clf.predict(vectorizer.transform(df['Text']))
-                df['predicted_sentiment'] = predictions
+                df['class'] = predictions
                 
                 st.success("✅ Batch analysis complete!")
                 st.dataframe(df)
@@ -176,13 +176,13 @@ with tab2:
                 with col1:
                     st.metric("Total Reviews", len(df))
                 with col2:
-                    st.metric("🌍 Category: World", len(df[df['predicted_sentiment'] == 1]))
+                    st.metric("🌍 Category: World", len(df[df['class'] == 1]))
                 with col3:
-                    st.metric("⚽ Category: Sports", len(df[df['predicted_sentiment'] == 2]))
+                    st.metric("⚽ Category: Sports", len(df[df['class'] == 2]))
                 with col4:
-                    st.metric("💼 Category: Business", len(df[df['predicted_sentiment'] == 3]))
+                    st.metric("💼 Category: Business", len(df[df['class'] == 3]))
                 with col5:
-                    st.metric("🔬 Category: Sci/Tech", len(df[df['predicted_sentiment'] == 4]))
+                    st.metric("🔬 Category: Sci/Tech", len(df[df['class'] == 4]))
         else:
             st.info("ℹ️ Please upload a CSV file with a 'Title' and 'Description' column to analyze.")
 
@@ -191,7 +191,7 @@ with tab3:
     
     st.markdown("""
     ### Top Features in Each Category
-    These words have the strongest influence on sentiment prediction.
+    These words have the strongest influence on class prediction.
     """)
     
     # Example feature importance (replace with actual from your model)
@@ -256,3 +256,4 @@ st.markdown(
     unsafe_allow_html=True
 
 )
+
